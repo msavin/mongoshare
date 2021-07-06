@@ -1,15 +1,12 @@
-# Mongo Share
+# Mongo Share for Meteor
 
-Mongo Share will prefix all of your application's MongoDB collection names so that you can share one database among multiple applications. This can reduce your hosting costs when you have a lot of small applications that do not warrant a unique database on their own. It's good for your wallet and the environment! 
+Mongo Share will prefix all of your MongoDB collection names so that you can share one database among multiple applications. This will reduce your hosting costs when you have a lot of small applications that may not warrant a unique database on their own. It's good for your wallet and the environment! 
 
-For example: 
-
-```
-Collection Name 			Prefixed Collection Name
-lists					app1_lists
-todos					app1_todos
-users					app1_users
-```
+| Original Collection Name | Prefixed Collection Name |
+|-----------------|--------------------------|
+| lists           | app1_lists               |
+| todos           | app1_todos               |
+| users           | app1_todos               |
 
 # How to Use
 
@@ -35,7 +32,7 @@ Alternatively, you may define it as a global isomorphic variable:
 MONGO_PREFIX = "app1"
 ````
 
-Finally, go into `./meteor/packages` and move the package as high on the list as you can, and right after the `mongo` package. This package must initalize before other packages to ensure that the prefix patch is applied. 
+Finally, go into `./meteor/packages` and move the package as high on the list as you can while ensuring it loads after the `mongo` package. This package must initalize before other packages to ensure that the prefix patch is applied. 
 
 # Downsides of Package
 
