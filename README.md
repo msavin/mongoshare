@@ -35,7 +35,7 @@ Alternatively, you may define it as a global isomorphic variable:
 MONGO_PREFIX = "app1"
 ````
 
-Finally: go into `./meteor/packages` and move the package as high on the list as you can, and right after the `mongo` package. This package must initalize before other packages to ensure that the prefix patch is applied. 
+Finally, go into `./meteor/packages` and move the package as high on the list as you can, and right after the `mongo` package. This package must initalize before other packages to ensure that the prefix patch is applied. 
 
 # Downsides of Package
 
