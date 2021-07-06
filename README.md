@@ -6,9 +6,9 @@ For example:
 
 ```
 Collection Name 			Prefixed Collection Name
-lists						app1_lists
-todos						app1_todos
-users						app1_users
+lists					app1_lists
+todos					app1_todos
+users					app1_users
 ```
 
 # How to Use
@@ -25,7 +25,7 @@ Second, define the prefix on your `settings.json` file:
 {
 	"public": {
 		"mongo_prefix": "app1",
-	},
+	}
 }
 ```
 
@@ -35,7 +35,7 @@ Alternatively, you may define it as a global isomorphic variable:
 MONGO_PREFIX = "app1"
 ````
 
-Finally: go into your `./meteor/packages` file and move the package as high on the list as you can, and right after the `mongo` package. This package must initalize before other packages to ensure that the prefix is applied. This is very important or your collections may collide.
+Finally: go into `./meteor/packages` and move the package as high on the list as you can, and right after the `mongo` package. This package must initalize before other packages to ensure that the prefix patch is applied. 
 
 # Downsides of Package
 
