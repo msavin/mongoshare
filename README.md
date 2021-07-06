@@ -21,7 +21,7 @@ Second, define the prefix on your `settings.json` file:
 ```json
 {
 	"public": {
-		"mongo_prefix": "app1",
+		"mongo_prefix": "app1"
 	}
 }
 ```
